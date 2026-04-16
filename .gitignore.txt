@@ -8,6 +8,3 @@ __pycache__/
 venv/
 env/
 anaconda3/
-
-#Datos
-data/.csv
