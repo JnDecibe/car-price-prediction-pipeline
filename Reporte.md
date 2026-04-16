@@ -54,6 +54,9 @@ Se rellenaron los datos vacíos con la mediana correspondiente a la categoría n
 #### Variables categóricas
 Se rellenaron los datos vacíos con la moda correspondiente a la categoría categórica donde falta el dato.
 
+### Escalamiento de Atributos
+Se integró StandardScaler en el pipeline final para normalizar las variables numéricas. Esto garantiza que atributos con magnitudes numéricas muy distintas (como el precio vs. el año del vehículo) tengan el mismo peso relativo durante el entrenamiento, evitando sesgos numéricos.
+
 ## Selección de Modelos
 
 ### Modelo 1 (Lineal)
