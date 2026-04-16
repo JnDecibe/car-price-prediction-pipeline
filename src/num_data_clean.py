@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#data_clean -> Queda absorvido por transformers.py
+#data_clean -> Queda absorbido por transformers.py
 import numpy as np
 from sklearn.impute import SimpleImputer
 
