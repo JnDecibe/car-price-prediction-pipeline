@@ -45,7 +45,6 @@ class CombinedAttributesAdder(BaseEstimator, TransformerMixin):
     def transform(self, X, y=None):
         #Agrupo cantidad de asientos \in {5,  7,  4,  8,  2,  6}:
         seat_cat = X[:, [seating_capacity_ix]]
-    
         
         #Agrupo por capacidad del tanque    
         cat_tank = [0,1,2,3] #0:Chico, 1: Mediano, 2: Grande, 3: Muy grande.
@@ -72,8 +71,8 @@ class CombinedAttributesAdder(BaseEstimator, TransformerMixin):
             ]
             age_cat = np.select(cond_age, cat_age, default=2).reshape(-1, 1)
             
-            # Agregamos la nueva columna a la matriz X original
-            # np.c_ es como un "append" de columnas
+            #Agrego la nueva columna a la matriz X original
+            #np.c_ es como un "append" de columnas
             return np.c_[X, seat_cat, tank_cat, age_cat]
         else:
             return np.c_[X, seat_cat, tank_cat]
